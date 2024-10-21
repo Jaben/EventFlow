@@ -4,13 +4,13 @@ name: pull-requests
 
 on:
   push:
-    branches: [ develop-v0 ]
+    branches: [ develop-v0-build ]
   pull_request:
-    branches: [ develop-v0 ]
+    branches: [ develop-v0-build ]
 
 jobs:
   build:
-    runs-on: [self-hosted, windows-10]
+    runs-on: [self-hosted, ubuntu-22.04]
     env:
       HELPZ_POSTGRESQL_USER: postgres
       HELPZ_POSTGRESQL_PASS: Password12!
