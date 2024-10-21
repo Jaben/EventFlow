@@ -35,7 +35,8 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
-      
+    - name: Install Bake
+      run: dotnet tool install --global Bake --version 0.27.40-beta
 
     - name: Start containers used by integration tests
       run: |
